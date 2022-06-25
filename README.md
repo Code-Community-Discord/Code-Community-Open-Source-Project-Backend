@@ -1,11 +1,11 @@
 # Code Community Group Project
 
 ## About 
-------
+
 Our group project is a web application that allows you to join and create social communities.
 
 ## Built With
-------
+
 * [Django](https://www.djangoproject.com/)
 * [python-decouple](https://pypi.org/project/python-decouple/)
 * [Docker](https://www.docker.com/)
@@ -13,7 +13,7 @@ Our group project is a web application that allows you to join and create social
 # For Contributors
 
 ## Pre-Requisites
-------
+
 
 Confirm you have the following installations, or follow these instructions: 
 1. Install the latest stable release of Python 3.9.9.    
@@ -31,7 +31,6 @@ Confirm you have the following installations, or follow these instructions:
    <img src="https://i.imgur.com/Gplv7tI.png" width="400px">
 
 ## Setup
-------
 
 1. Open a command console and CD into a directory you want to store the virtual environment in. 
 
@@ -99,7 +98,6 @@ Confirm you have the following installations, or follow these instructions:
 4. Et Voila! Feel free to start adding to the project.
 
 ## Development Guide
-------
 
 This section outlines the community's development process. 
 
