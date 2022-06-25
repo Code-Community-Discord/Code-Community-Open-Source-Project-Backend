@@ -112,34 +112,33 @@ Initial planning follows a sequential process.
 2. Describe the purpose of the application or functionality in one sentence. 
 
 3. Define **User Stories**.
-
-* As a ***role***, I want ***objective***, So I ***benefit***.
+   * As a ***role***, I want ***objective***, So I ***benefit***.
    
 4. Map **Entity-Relationship Models**. 
 
 5. Divide team members (5 - 10 total people) into two subteams. 
-* One subteam consists of **frontend developers (FEDs)**, the other subteam consists of **backend developers (BEDs)**.
+   * One subteam consists of **frontend developers (FEDs)**, the other subteam consists of **backend developers (BEDs)**.
 
 6. Determine the basis for languages, frameworks, and libraries. 
 
 7. Define preliminary **Requirements**.
 
 8. Create GitHub repository. 
-* Two repositories; one for frontend, one for backend. Documentation must include:
-   * README
-   * GITFLOW
-   * REQUIREMENTS
-   * CONTRIBUTORS
-* Documentation will be updated throughout the course of the project.
+   * Two repositories; one for frontend, one for backend. Documentation must include:
+      * README
+      * GITFLOW
+      * REQUIREMENTS
+      * CONTRIBUTORS
+   * Documentation will be updated throughout the course of the project.
 
 9. Define user **Endpoints**.
 
 10. Develop **Wireframe** (Figma).
 
 11. Update the **Product Backlog (PBL)**. 
-* Consider all inputs gathered so far.
-* Add the **Product Goal** to the PBL, based on the product's purpose defined in Step 2. 
-* Continue adding items to the PBL during development.
+   * Consider all inputs gathered so far.
+   * Add the **Product Goal** to the PBL, based on the product's purpose defined in Step 2. 
+   * Continue adding items to the PBL during development.
 
 ------
 ### Development
@@ -147,7 +146,7 @@ Initial planning follows a sequential process.
 
 Actual development follows an agile process <a href="https://scrumguides.org/scrum-guide.html">(SCRUM)</a>. 
 
-1. Sprint Planning 
+#### 1. Sprint Planning 
 * Review the PBL and develop an agenda for the next sprint.
 * Cleary define the **Sprint Goal**. (the *"why"*)
    * What value does this sprint provide?
@@ -158,29 +157,29 @@ Actual development follows an agile process <a href="https://scrumguides.org/scr
 * Developers collaborate plans to complete each item. (the *"how"*)
 * Add the Sprint Goal, PBL items, and plans to the **Sprint Backlog (SBL)**.
 
-2. Progression 
+#### 2. Progression 
 * Each week during a sprint, developers will advise the team: 
    * What you've contributed to the project in the past week.
    * What you plan to contribute this week.
    * Is anything hampering your progress?
 * Changes can be made to the SBL as more is learned.
 
-3. Sprint Completion
+#### 3. Sprint Completion
 * A sprint is completed once every item in the SBL meets the DOD. 
 
-4. Sprint Review 
+#### 4. Sprint Review 
 * The team shows their results in a working session.
 * Outcomes are reviewed and tested. 
 * Deviations from expectations are addressed.
 * PBL adjustments are made.
 
-5. Sprint Retrospective
+#### 5. Sprint Retrospective
 * Inspect the last sprint and consider: individuals, interactions, processes, tools, and DODs.  
 * What went well? What were the problems? How were they solved/not solved?
 * Did someone come in with an assumption that went wrong? Where did the assumption originiate from?
 * Identify the most helpful changes that can be made and act ASAP. 
 
-6. Rinse and Repeat
+#### 6. Rinse and Repeat
 * Return to Step 1 until the Product Goal is accomplished.
 
 ------
