@@ -136,9 +136,9 @@ Initial planning follows a sequential process.
 10. Develop **Wireframe** (Figma).
 
 11. Update the **Product Backlog (PBL)**. 
-   * Consider all inputs gathered so far.
-   * Add the **Product Goal** to the PBL, based on the product's purpose defined in Step 2. 
-   * Continue adding items to the PBL during development.
+      * Consider all inputs gathered so far.
+      * Add the **Product Goal** to the PBL, based on the product's purpose defined in Step 2. 
+      * Continue adding items to the PBL during development.
 
 ------
 ### Development
