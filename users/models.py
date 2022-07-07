@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 
+# will need frontend to enforce min character limit on signup to prevent
+# empty strings for username
 class User(AbstractUser):
     # Django comes with Username, password, email fields,
     # and, first_name out of the box
@@ -26,10 +28,15 @@ class User(AbstractUser):
     # Additionally -- Set to True when user logs in via
     # frontend and False when user logs out
 
+# will need frontend to enforce min character limit on signup to prevent
+# empty strings for group name and a regex checker to prevent
+# nonacceptable characters
+
 class Group(models.Model):
     name = models.CharField(max_length=128, unique=True)
     members = models.ManyToManyField(User, through='Membership', related_name="usergroups")
     info = models.TextField(blank=True)
+    date_created = models.DateField(auto_now=True)
     # should have a field of events via foreignkey relationship
     # from event model
     # Should have a field of posts via foreignkey relationship
