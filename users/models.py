@@ -4,13 +4,17 @@ from django.contrib.auth.models import AbstractUser
 
 # will need frontend to enforce min character limit on signup to prevent
 # empty strings for username
+
+# Possible to utilize validators on backend to validate fields, but more intuitive to 
+# do so on frontend.
+
 class User(AbstractUser):
-    # Django comes with Username, password, email fields,
-    # and, first_name out of the box
-    # Username field may contain alphanumeric, _, @, ., and -
-    # Characters
+    # Django comes with username, password, email fields,
+    # and, first_name out of the box.
+    # I only included the username explicitly, so that I could add the unique constraint to it
+    # the other fields listed above I did not think needed to be modified.
     username = models.CharField(max_length=150, unique=True)
-    # And are unique and limited by 150 characters
+    # username field allows alphanumeric, _, @, ., and -
     # for reference: https://docs.djangoproject.com/en/4.0/ref/contrib/auth/
     picture = models.TextField(blank=True)
     # blank allowable in case users do not wish to upload a
