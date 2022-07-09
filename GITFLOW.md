@@ -81,3 +81,4 @@ Follow these steps when you have finished editing your files.
     git push
     ```
 * Submit a Pull Request on the GitHub site. You can add a more descriptive message of what you are pushing here. If there are any questions, conflicts, or issues with what you are pushing, please note them here as well. 
+    <img src="https://i.imgur.com/y5idIxf.png" width="600px">
