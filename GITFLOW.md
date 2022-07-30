@@ -68,10 +68,18 @@ Follow these steps when you have finished editing your files.
     ```
     git add .
     ```
-* Commit your changes to the local repository. Add a short (but descriptive) message explaining what you are pushing. 
+* Commit your changes to the local repository. 
     ```
     git commit -m "<your_message>"
     ```
+    * Note that commit messages must follow a specific format: 
+
+        **(type)(scope)**: **(subject)**
+
+        Where **(scope)** is optional. 
+        
+        For more details, see <a href="https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716">Semantic Commit Messages</a>.
+
 * Push your changes to your branch. 
     ```
     git push
