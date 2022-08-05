@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.db.utils import IntegrityError
 from .models import User, Group, Membership
+from rest_framework.authtoken.models import Token
 
 class UserModelTest(TestCase):
 
@@ -23,6 +24,7 @@ class UserModelTest(TestCase):
         num_users = len(User.objects.all())
         User.objects.create(
             username="Bobby_Flay",
+            password="aster",
             first_name="Bobby",
             skills="Boiling, Baking, Battling",
             background="Brisk Baking",
@@ -30,6 +32,7 @@ class UserModelTest(TestCase):
             hobbies="Bread Baking",
             availability=True
         )
+        bobby = User.objects.all()[0]
         self.assertEqual(num_users + 1, len(User.objects.all()))
 
     def test_update_user_fields(self):
