@@ -1,8 +1,8 @@
-# Code Community Group Project
+# Code Community Open Source Project
 
 ## About 
 
-Our group project is a web application that allows you to join and create social communities.
+This open source project is a web application that allows you to join and create social communities.
 
 ## Built With
 
@@ -36,7 +36,7 @@ Confirm you have the following installations, or follow these instructions:
 
    For example:
    ```
-   cd "C:\Users\Darius\Documents\Group Project"
+   cd "C:\Users\Darius\Documents\My Project"
    ```
 
 2. Create a virtual environment with the command: 
@@ -70,7 +70,7 @@ Confirm you have the following installations, or follow these instructions:
 
 5. Clone the project's repository into the virtual environment you created: 
    ```
-   git clone https://github.com/Code-Community-Discord/Code-Community-Group-Project-Backend.git
+   git clone https://github.com/Code-Community-Discord/Code-Community-Open-Source-Project-Backend.git
    ```
 
 6. Navigate to the directory holding the settings.py file and create a .env file with the provided SECRET_KEY and DEBUG options.
@@ -82,7 +82,7 @@ Confirm you have the following installations, or follow these instructions:
 ------
 1. CD to the root repository directory created in **Setup - Step 5**.
    ```
-   cd "C:\Users\Darius\Documents\Group Project\(name_of_environment)\Code-Community-Group-Project-Backend"
+   cd "C:\Users\Darius\Documents\My Project\(name_of_environment)\Code-Community-Open-Source-Project-Backend"
    ```
 
 2. Build the Docker container:
