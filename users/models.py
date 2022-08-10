@@ -1,16 +1,5 @@
 from django.db import models
-from django.db.models.signals import post_save
-from django.dispatch import receiver
 from django.contrib.auth.models import AbstractUser
-from rest_framework.authtoken.models import Token
-from django.conf import settings
-
-
-@receiver(post_save, sender=settings.AUTH_USER_MODEL)
-def create_auth_token(sender, instance=None, created=False, **kwargs):
-    if created:
-        Token.objects.create(user=instance)
-
 
 # will need frontend to enforce min character limit on signup to prevent
 # empty strings for username
@@ -37,10 +26,12 @@ class User(AbstractUser):
     # blank allowable initially and users can add/update later
     hobbies = models.TextField(blank=True)
     # blank allowable initially and users can add/update later
-    availability = models.BooleanField()
+    availability = models.BooleanField(default=True)
     # Will be set to True when the User model is created
     # Additionally -- Set to True when user logs in via
     # frontend and False when user logs out
+
+    # Will have a field of auth_token inserted from Django Rest Framework (DRF)
 
 # will need frontend to enforce min character limit on signup to prevent
 # empty strings for group name and a regex checker to prevent

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     # created apps go here
     'rest_framework.authtoken', # for token auth
+    'authentication',
     'users',
 ]
 
