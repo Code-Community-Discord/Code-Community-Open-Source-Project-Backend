@@ -1,6 +1,7 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 from django.db.utils import IntegrityError
 from .models import User, Group, Membership
+import json
 
 class UserModelTest(TestCase):
 
@@ -38,7 +39,7 @@ class UserModelTest(TestCase):
             availability=True
         )
         bobby = User.objects.all()[1]
-        bobby.set_password("aster")
+        bobby.set_password("flay")
         bobby.save()
         self.assertEqual(num_users + 1, len(User.objects.all()))
 
@@ -209,3 +210,41 @@ class MembershipModelTest(TestCase):
         self.assertEqual(guy_groups - 1, len(guy.usergroups.all()))
         self.assertEqual(bobby_groups - 1, len(bobby.usergroups.all()))
         self.assertEqual(num_memberships - 2, len(Membership.objects.all()))
+
+
+class UserViewTest(TestCase):
+
+    def setUp(self):
+        User.objects.create(
+            username="Guy_Fieri",
+            first_name="Guy",
+            skills="Flambe, Fry, Feast",
+            background="Fiery Cooking",
+            goals="Fastest Flambe-r",
+            hobbies="Frying and Flambe-ing",
+            availability=True
+        )
+
+        guy = User.objects.all()[0]
+        guy.set_password("fieri")
+        guy.save()
+
+    def test_fetch_user(self):
+        c = Client()
+        response = json.loads(c.get('/users/1').content)
+        guy = User.objects.get(username__exact="Guy_Fieri")
+        self.assertEqual(guy.username, "Guy_Fieri")
+
+    def test_create_user(self):
+        c = Client()
+        new_user = {
+            "username": "Bobby_Flay",
+            "password": "flay",
+            "first_name": "Bobby",
+            "skills": "Boiling, Baking, Battling",
+            "background": "Brisk Baking",
+            "goals": "Best Battler",
+            "hobbies": "Bread Baking",
+        }
+        response = c.post('/users', new_user, 'application/json').status_code
+        self.assertEqual(200, response)
