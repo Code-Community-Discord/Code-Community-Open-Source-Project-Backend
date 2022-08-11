@@ -7,6 +7,7 @@ This open source project is a web application that allows you to join and create
 ## Built With
 
 * [Django](https://www.djangoproject.com/)
+* [Django Rest Framework](https://www.django-rest-framework.org/)
 * [python-decouple](https://pypi.org/project/python-decouple/)
 * [Docker](https://www.docker.com/)
 
